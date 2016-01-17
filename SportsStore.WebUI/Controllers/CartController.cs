@@ -29,7 +29,7 @@ namespace SportsStore.WebUI.Controllers
             var product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
             if (product != null)
             {
-                GetCart().AddItem(product, 1);
+                GetCart().AddItem( product, 1);
             }
             return RedirectToAction("Index", new { returnUrl });
         }
